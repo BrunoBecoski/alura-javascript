@@ -1,0 +1,168 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+}
+
+body {
+  background-image: url("image/bg-home-main.jpg")  ;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* HEADER */
+
+.nav-bar {
+  margin-top: 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar .input {
+
+  color: #fff;
+  font-size: 12px;
+
+  width: 230px;
+  height: 50px;
+
+  margin: 10px;
+
+  background: transparent;
+
+  background-image: url('image/lupa.svg');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: right;
+  border-radius: 8px;
+
+  border: 1px solid #ffffffa6;
+
+}
+
+.link {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600; 
+
+  transition: opacity 0.2s;
+}
+
+.link:hover {
+  opacity: 50%;
+}
+
+.primary-button {
+  color: #167bf7;
+  text-transform: uppercase;
+  font-weight: 800;
+  border: none;
+
+  height: 55px;
+  width: 200px;
+
+  background-color: #a3ffbf;
+  border-radius: 150px;
+
+  box-shadow: 0 5px 20px #0000005e;
+
+
+
+}
+
+.primary-button:hover {
+  
+  position: absolute;
+
+  background-color: firebrick ;
+  bottom: -5px;
+  box-shadow: none;
+}
+
+
+.section-1 {
+  color: white;
+  /* display: flex; */
+}
+
+.img-escafanfo {
+  width: 200px;
+}
+
+
+/* ---- CATEGORIAS ---- */
+
+.categories {
+  display: grid;
+
+  width: 840px;
+  height: 446px;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px
+}
+
+
+.category-wrapper {
+  background-color: #fff;
+
+  padding: 20px;
+
+  border-top-right-radius: 20px;
+
+  border-bottom: 5px solid orange;
+}
+
+.category-icon {
+  width: 40px;
+  height: 40px;
+  background-color: orange;
+  border-radius: 5px;
+
+  margin-bottom: 10px;
+}
+
+.category-link {
+  color: orangered;
+  text-decoration: none;
+}
+
+.category-link span {
+  font-weight: 600;
+}
+
+.category-link h4 {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.category-linkTecnologies {
+  margin-top: 10px;
+}
+
+.category-linkTecnology {
+  text-decoration: none;
+  font-size: 13px;
+  color: #424242;
+}
+
+.category-linkTecnology:hover {
+  text-decoration: underline;
+}
+
+

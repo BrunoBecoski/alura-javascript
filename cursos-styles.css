@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: royalblue;
+  color: whitesmoke;
+}
+
+.top {
+  position: fixed;
+}
+
+ul {
+  font-weight: bold;
+  font-size: 42px;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+
+ul li {
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+
+
+/* LETTERS */
+
+.letters {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.letters a {
+  color: whitesmoke;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: bold;
+
+  border: 3px solid whitesmoke;
+  padding: 2px 5px;
+  margin-left: 5px;
+
+  transition: color 0.5s, border-color 0.5s;
+}
+
+
+.letters a:hover {
+  color: black;
+  border-color: black;
+}
