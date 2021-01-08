@@ -32,6 +32,9 @@ ul li {
   margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
+
+  flex-wrap: wrap;
+
 }
 
 .letters a {

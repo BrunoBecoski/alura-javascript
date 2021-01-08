@@ -1,5 +1,3 @@
-console.log('crusos-scripts');
-
 const url = 'https://www.alura.com.br/api/cursos';
 
 requestAPI(url);
@@ -18,19 +16,20 @@ function requestAPI(urlAPI) {
 function renderCursos(data) {
 
   const mainUl = document.querySelector("#list");
-
+  
   data.forEach(curso => {
-    
-    const letter = curso.nome.substring(0, 1);
+      
+    const name = formatRegex(curso);
 
-    createShortcut(letter);
+    createShortcut(name);
     
-    if(!document.getElementById(letter)) {
+    if(!document.getElementById(name)) {
+      
       const newUl = document.createElement("ul");
 
-      newUl.id = letter;
+      newUl.id = name;
     
-      newUl.innerText = letter;
+      newUl.innerText = name;
   
       mainUl.appendChild(newUl);
   
@@ -41,7 +40,8 @@ function renderCursos(data) {
       newUl.appendChild(li);
 
     } else {
-      const newUl = document.getElementById(letter);
+
+      const newUl = document.getElementById(name);
 
       const li = document.createElement("li");
   
@@ -51,6 +51,34 @@ function renderCursos(data) {
     }
 
   });  
+}
+
+function formatRegex(curso) {
+
+  const myRegex = /^.*?(?=:)/g;
+  const myRegex1 = /^.*?(?=\sparte\s[0-9])/g;
+
+  const name = curso.nome;
+
+  console.log('name');
+  console.log(name);
+
+  let result = myRegex.exec(name);
+
+  if(!result) {
+    result = curso.nome
+  }
+  
+  console.log('result');
+  console.log(result);
+
+  const nameRegex = result[0];
+
+  if ((parseInt(nameRegex.charAt(nameRegex.length - 1)))) {
+    return result = myRegex1.exec(result);
+  } else {
+    return result;
+  }  
 }
 
 function createShortcut(letter) {
@@ -69,35 +97,3 @@ function createShortcut(letter) {
 
   div[0].appendChild(a);
 }
-
-// function renderCursos(data) {
-
-//   const ul = document.querySelector("#list");
-
-//   data.forEach(curso => {
-
-//     const li = document.createElement("li");
-
-//     li.innerHTML = curso.nome;
-
-//     ul.appendChild(li);
-
-//   });  
-// }
-
-// fetch('https://www.alura.com.br/api/cursos')
-//   .then(response => {
-//     if (response.status === 200) {
-//       return  response.json();
-//     } else {
-//       throw new Error('Ops! Houve um erro em nosso servidor.');
-//     }
-//   })
-//   .then(response => {
-//     console.debug(response);
-//   }).catch(error => {
-//     console.log(error);
-//   })
-
-
-
