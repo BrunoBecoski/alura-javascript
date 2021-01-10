@@ -55,30 +55,14 @@ function renderCursos(data) {
 
 function formatRegex(curso) {
 
-  const myRegex = /^.*?(?=:)/g;
-  const myRegex1 = /^.*?(?=\sparte\s[0-9])/g;
 
   const name = curso.nome;
 
-  console.log('name');
-  console.log(name);
+  const result = name.substr(0, 1);
 
-  let result = myRegex.exec(name);
+  const resultFormat = result.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
 
-  if(!result) {
-    result = curso.nome
-  }
-  
-  console.log('result');
-  console.log(result);
-
-  const nameRegex = result[0];
-
-  if ((parseInt(nameRegex.charAt(nameRegex.length - 1)))) {
-    return result = myRegex1.exec(result);
-  } else {
-    return result;
-  }  
+  return resultFormat;  
 }
 
 function createShortcut(letter) {
