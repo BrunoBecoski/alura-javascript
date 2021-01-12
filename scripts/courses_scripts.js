@@ -2,15 +2,42 @@ const url = 'https://www.alura.com.br/api/cursos';
 
 requestAPI(url);
 
+const search = getQueryParams();
+
+function handleSubmitSearch(event) {
+
+  event.preventDefault();
+
+  const searchValue = document.getElementById("input-search").value;
+
+  window.location.href = `http://127.0.0.1:5500/courses.html?name=${searchValue}`;
+}
+
 function requestAPI(urlAPI) {
   fetch(urlAPI)
     .then(response => {
       console.log('Request successful');
       response.json()
         .then(cursos => {
-          renderCursos(cursos);
+          render(cursos);
         });
     });
+}
+
+function getQueryParams() {
+  const params = new URLSearchParams(document.location.search.substring(1));
+  const search = params.get("name"); 
+  return search;
+}
+
+function render(cursos) {
+
+  if (!search) {
+    renderCursos(cursos);
+  } else {
+    renderSearch(cursos);
+  }
+
 }
 
 function renderCursos(data) {
@@ -55,7 +82,6 @@ function renderCursos(data) {
 
 function formatRegex(curso) {
 
-
   const name = curso.nome;
 
   const result = name.substr(0, 1);
@@ -80,4 +106,30 @@ function createShortcut(letter) {
   a.href = `#${letter}`;
 
   div[0].appendChild(a);
+}
+
+function renderSearch(cursos) {
+  
+  const mainUl = document.querySelector("#list");
+  const h1 = document.createElement("h1");
+  const newUl = document.createElement("ul");
+
+  
+  h1.innerText = search;
+  mainUl.appendChild(h1);
+  newUl.id = search; 
+  mainUl.appendChild(newUl);
+  
+  cursos.forEach(curso => {
+
+    const lowerCaseName = curso.nome.toLowerCase();
+    const lowerCaseSearch = search.toLowerCase();
+    
+    if(lowerCaseName.includes(lowerCaseSearch)){
+      const li = document.createElement("li");
+      li.innerText = curso.nome;
+      newUl.appendChild(li);
+    }
+  });
+
 }

@@ -1,14 +1,17 @@
-* {
-  box-sizing: border-box;
-}
-
 html {
   background-color: royalblue;
   color: whitesmoke;
 }
 
+.container {
+  width: 80%;
+  margin: auto
+}
+
 .top {
   position: fixed;
+  margin-left: 75%;
+  margin-top: -50px;
 }
 
 ul {
@@ -23,13 +26,55 @@ ul li {
   font-size: 20px;
 }
 
+/* INPUT */
+
+
+form label {
+
+  padding-top: 5px;
+  padding-right: 5px; 
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  border-radius: 8px;
+
+  width: 230px;
+  height: 50px;
+
+  border: 1px solid #ffffffa6;
+}
+
+.input {
+
+  color: #fff;
+  font-size: 12px;
+
+  border: none;
+
+  margin: 10px;
+
+  background: transparent;
+}
+
+.input-button {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  background-image: url('../image/lupa.svg');
+  background-repeat: no-repeat;
+}
+
+.input-button:hover {
+  background-image:  url('../image/lupa-hover.svg');
+  background-repeat: no-repeat;
+}
 
 
 /* LETTERS */
 
 .letters {
-  width: 80%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-evenly;
 
@@ -49,7 +94,6 @@ ul li {
 
   transition: color 0.5s, border-color 0.5s;
 }
-
 
 .letters a:hover {
   color: black;
