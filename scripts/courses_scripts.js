@@ -58,7 +58,6 @@ function renderCursos(data) {
       const newUl = document.createElement("ul");
 
       newUl.id = name;
-    
       newUl.innerText = name;
   
       mainUl.appendChild(newUl);
@@ -101,9 +100,7 @@ function strong(name) {
 function formatRegex(curso) {
 
   const name = curso.nome;
-
   const result = name.substr(0, 1);
-
   const resultFormat = result.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
 
   return resultFormat;  
@@ -116,11 +113,9 @@ function createShortcut(letter) {
   }
 
   const a = document.createElement("a");
-
   const div = document.getElementsByClassName("letters");
 
   a.innerHTML = letter;
-
   a.href = `#${letter}`;
 
   div[0].appendChild(a);
@@ -137,6 +132,8 @@ function renderSearch(cursos) {
   newUl.id = search; 
   mainUl.appendChild(newUl);
   
+  let count = 0;
+
   cursos.forEach(curso => {
 
     const lowerCaseName = curso.nome.toLowerCase();
@@ -146,7 +143,16 @@ function renderSearch(cursos) {
       const li = document.createElement("li");
       li.innerHTML = strong(curso.nome);
       newUl.appendChild(li);
+      count = count + 1;
     }
   });
+
+  
+  if (count === 0) {
+    const ulSearch = document.querySelector(`#${search}`);
+    const li = document.createElement("li");
+    li.innerHTML = `Nenhum resultado encontrado para <strong>${search}</strong>. Tente outra busca!`;
+    ulSearch.appendChild(li);
+  }
 
 }
