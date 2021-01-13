@@ -1,6 +1,16 @@
 html {
-  background-color: royalblue;
-  color: whitesmoke;
+  background-color:whitesmoke;
+}
+
+.background-white {
+  background-color: white;
+  width: 100vw;
+  height: 100px;
+  margin-left: -12%;
+
+  position: absolute;
+
+  z-index: -1;
 }
 
 .container {
@@ -8,23 +18,46 @@ html {
   margin: auto
 }
 
-.top {
-  position: fixed;
-  margin-left: 75%;
-  margin-top: -50px;
+/* NAV */
+
+.nav-bar {
+  height: 100px;
+  background-color: white;
+
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; 
+
 }
 
-ul {
-  font-weight: bold;
-  font-size: 42px;
-  margin-top: 32px;
-  margin-bottom: 24px;
+
+.nav-bar .back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-ul li {
-  font-weight: lighter;
-  font-size: 20px;
+.nav-bar a {
+  text-decoration: none;
 }
+
+.nav-bar h1 {
+  color: black;
+}
+
+.nav-bar .showAll {
+  color: black;
+  font-size: 18px;
+  border-bottom: 2px solid white;
+
+
+  transition: border-bottom 0.5s;
+}
+
+.nav-bar .showAll:hover {
+  border-bottom: 2px solid black;
+}
+
 
 /* INPUT */
 
@@ -42,12 +75,12 @@ form label {
   width: 230px;
   height: 50px;
 
-  border: 1px solid #ffffffa6;
+  border: 1px solid rgba(0, 0, 0, 0.500);
 }
 
 .input {
 
-  color: #fff;
+  color: black;
   font-size: 12px;
 
   border: none;
@@ -62,14 +95,53 @@ form label {
   height: 20px;
   background-color: transparent;
   border: none;
-  background-image: url('../image/lupa.svg');
+  background-image: url('../image/lupa-preta.svg');
   background-repeat: no-repeat;
 }
 
-.input-button:hover {
-  background-image:  url('../image/lupa-hover.svg');
-  background-repeat: no-repeat;
+
+/* MAIN */
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+
+.arrow-top {
+  background-image: url('../image/arrow-white.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  height: 40px;
+  width: 50px;
+
+  background-color: rgba(0, 0, 0, 0.200);
+ 
+
+  transform: rotate(90deg);
+
+  position: fixed;
+  margin-left: 90%;
+  margin-top: 80%;
+
+  transition: background-color 0.5s;
+}
+
+.arrow-top:hover  {
+  background-color: black;
+}
+
+/* h1 */
+
+#title {
+  font-size: 50px;
+
+  padding: 15px 0 30px 0;
+}
+
 
 
 /* LETTERS */
@@ -83,12 +155,12 @@ form label {
 }
 
 .letters a {
-  color: whitesmoke;
+  color: grey;
   font-size: 24px;
   text-decoration: none;
   font-weight: bold;
 
-  border: 3px solid whitesmoke;
+  border: 3px solid grey;
   padding: 2px 5px;
   margin-left: 5px;
 
@@ -98,4 +170,26 @@ form label {
 .letters a:hover {
   color: black;
   border-color: black;
+}
+
+/* UL LI */
+
+#list ul {
+  font-weight: bold;
+  font-size: 42px;
+  margin-top: 32px;
+  margin-bottom: 24px;
+
+  padding: 10px 15px;
+
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+
+
+#list ul li{
+  list-style: none;
+
+  font-weight: lighter;
+  font-size: 20px;
 }

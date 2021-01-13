@@ -43,6 +43,9 @@ function render(cursos) {
 function renderCursos(data) {
 
   const mainUl = document.querySelector("#list");
+
+  const h1 = document.querySelector("#title");
+  h1.innerText = "Cursos";
   
   data.forEach(curso => {
       
@@ -62,7 +65,7 @@ function renderCursos(data) {
   
       const li = document.createElement("li");
       
-      li.innerHTML = curso.nome;
+      li.innerHTML = strong(curso.nome);
       
       newUl.appendChild(li);
 
@@ -72,12 +75,27 @@ function renderCursos(data) {
 
       const li = document.createElement("li");
   
-      li.innerHTML = curso.nome;
+      li.innerHTML =  strong(curso.nome);
         
       newUl.appendChild(li);
     }
 
   });  
+}
+
+function strong(name) {
+
+  const regexBefore = /^(.*?)\:/;
+  const regexAfter = /(?<=\:).*/;
+
+  if (!name.includes(':')){
+    return `<strong>${name}</strong>`
+  } 
+
+  const strong = regexBefore.exec(name);
+  const normal = regexAfter.exec(name);
+
+  return `<strong>${strong[0]}</strong> ${normal[0]}`;
 }
 
 function formatRegex(curso) {
@@ -111,12 +129,11 @@ function createShortcut(letter) {
 function renderSearch(cursos) {
   
   const mainUl = document.querySelector("#list");
-  const h1 = document.createElement("h1");
   const newUl = document.createElement("ul");
-
   
+  const h1 = document.querySelector("#title");
   h1.innerText = search;
-  mainUl.appendChild(h1);
+  
   newUl.id = search; 
   mainUl.appendChild(newUl);
   
@@ -127,7 +144,7 @@ function renderSearch(cursos) {
     
     if(lowerCaseName.includes(lowerCaseSearch)){
       const li = document.createElement("li");
-      li.innerText = curso.nome;
+      li.innerHTML = strong(curso.nome);
       newUl.appendChild(li);
     }
   });

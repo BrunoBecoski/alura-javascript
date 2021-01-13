@@ -9,29 +9,39 @@
     <title>Alura - cursos</title>
   </head>
 
+  <div class="background-white"></div>
+
   <body class="container">
 
-    <header>
-      <nav>
-        <a href="/">Voltar</a>
+    <header id="header">
+      <nav class="nav-bar">
+        <a href="/">
+          <h1>AluraScript</h1>
+        </a>
+
+        <form onsubmit="return handleSubmitSearch(event)">
+          <label for="course" >
+            <input class="input" id="input-search" placeholder="Procure por outros cursos?">
+            <button class="input-button" type="submit"></button>
+          </label>
+        </form>
+        
+        <a class="showAll" href="courses.html">Mostrar todos os cursos</a>
+        
+               
+        </div>
       </nav>
     </header>
 
+    <main>
 
-
-    <section>
-      <h1 id="header" title="teste Title">Cursos</h1>
-      <a href="courses.html">Mostrar todos os cursos</a>
-      <form onsubmit="return handleSubmitSearch(event)">
-        <label for="course" >
-          <input class="input" id="input-search" placeholder="Procure por outros cursos?">
-          <button class="input-button" type="submit"></button>
-        </label>
-      </form>
       <div class="top">
-        <a href="#header">Voltar para o topo<a/>
+        <a class="arrow-top" href="#header"><a/>
       </div>
 
+      <h1 id="title"></h1>
+
+      
       <div class="letters">
 
       </div>
@@ -41,7 +51,7 @@
       </ul> 
 
 
-    </section>
+    </main>
     <script src="./scripts/courses_scripts.js" ></script>
 </body>
 </html>
