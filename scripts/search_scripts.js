@@ -1,3 +1,22 @@
+function wave() {
+  var ocean = document.getElementById("ocean"),
+  waveWidth = 5,
+  waveCount = Math.floor(window.innerWidth/waveWidth),
+  docFrag = document.createDocumentFragment();
+  
+  for(var i = 0; i < waveCount; i++){
+    var wave = document.createElement("div");
+    wave.className += " wave";
+    docFrag.appendChild(wave);
+    wave.style.left = i * waveWidth + "px";
+    wave.style.animationDelay = (i/100) + "s";
+  }
+  
+  ocean.appendChild(docFrag);
+}
+
+wave();
+
 const search = getQueryParams();
 
 const dataSearchJson = searchApi(search);
@@ -44,19 +63,39 @@ async function renderSearch(dataSearchJson) {
   
   jsonData.body.results.filter(data => {
     
+    console.log(data);
+
     const ul = document.querySelector("#ul");
 
+    const a = document.createElement("a");
     const li = document.createElement("li");
+    const div = document.createElement("div");
+    const img = document.createElement("img");
     const h3 = document.createElement("h3");
     const p = document.createElement("p");
 
+    const css = `#${data.id}:hover { box-shadow: 0 0 1rem ${data.mobileColor} }`;
+    const style = document.createElement('style');
+
+    li.id = data.id
+    
+    a.href= data.siteUrl;
+    img.src = data.image;
     h3.innerText = data.title;
-    p.innerText = data.description.raw;
+    p.innerHTML = data.description.raw;
 
     li.style.borderColor = data.mobileColor;
+    
+    style.appendChild(document.createTextNode(css));
 
-    li.appendChild(h3);
-    li.appendChild(p);
+    div.appendChild(img);
+    div.appendChild(h3);
+
+    a.appendChild(div);
+    a.appendChild(p);
+    a.appendChild(style);
+
+    li.appendChild(a);
 
     ul.appendChild(li);
   })
