@@ -7,12 +7,10 @@ html {
 
 #ocean{
   z-index: -1;
-  width: 100%;
   min-height: 200px;
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
 
   background-color: whitesmoke;
 }
@@ -22,10 +20,11 @@ html {
   display: inline-block;
   height: 60%;
   width: 5px;
+  
+  background: linear-gradient(#167cf7 10%, #61A5F9 50%);
 
-  background-color: #167bf7;
   animation-name: dostuff; 
-  animation-duration: 3s; 
+  animation-duration: 5s; 
   animation-iteration-count: infinite;
   transition-timing-function: ease-in-out;
 }
@@ -48,7 +47,7 @@ html {
 
 .nav-bar {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 
   height: 100px;
@@ -66,7 +65,7 @@ html {
 }
 
 .nav-bar .h1-logo:hover {
-  color: #39C5ED;
+  color: black;
 }
 
 .nav-bar .label-search {
@@ -80,8 +79,11 @@ html {
   padding: .5rem;
 
   background-color: white;
-  border: 2px solid #3E3BF7;
   border-radius: 0.4rem;
+}
+
+.nav-bar .label-search:focus {
+  border-color: black;
 }
 
 .nav-bar .label-search input {
@@ -91,6 +93,12 @@ html {
   background-color: transparent;
   border: none;
   color: black;
+}
+
+
+
+.nav-bar input:focus + label {
+  background-color: magenta;
 }
 
 .nav-bar .label-search button {
@@ -120,7 +128,16 @@ html {
 }
 
 .nav-bar .a-showAll:hover {
-  border-bottom: 1px solid #39C5ED;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.nav-bar form label {
+  border: 2px solid grey;
+
+}
+
+.nav-bar form label:focus-within {
+  border-color: black;
 }
 
 
@@ -136,11 +153,6 @@ html {
 
 
 /* = = = MAIN = = = */
-
-
-main {
-  margin-top: 150px;
-}
 
 main h1 {
   margin: 2rem 0;
