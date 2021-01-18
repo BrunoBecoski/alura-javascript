@@ -1,10 +1,9 @@
 html {
   background-color:whitesmoke;
-  scroll-behavior: smooth;
 }
 
 .background-white {
-  background-color: white;
+  background-color: var(--main-color);
   
   width: 100%;
   height: 100px;
@@ -25,7 +24,7 @@ html {
 
 .nav-bar {
   height: 100px;
-  background-color: white;
+  background-color: var(--main-color);
 
   display: flex;
   justify-content: space-around; 
@@ -41,10 +40,6 @@ html {
 
 .nav-bar a {
   text-decoration: none;
-}
-
-.nav-bar h1 {
-  color: black;
 }
 
 .nav-bar .showAll {
@@ -97,7 +92,7 @@ form label {
   height: 20px;
   background-color: transparent;
   border: none;
-  background-image: url('../image/lupa-preta.svg');
+  background-image: url('../image/magnifying-black.svg');
   background-repeat: no-repeat;
 }
 

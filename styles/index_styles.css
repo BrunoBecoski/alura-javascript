@@ -1,16 +1,53 @@
-body {
-  background-image: url("../image/bg-home-main.jpg")  ;
-  background-size: cover;
-  background-repeat: no-repeat;
+/* = = = OCEAN = = = */
 
+#ocean{
+  z-index: -1;
+  min-height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
 }
+
+.wave{
+  position: absolute;
+  display: inline-block;
+  height: 60%;
+  width: 5px;
+  
+  background: linear-gradient(#167cf7 10%, #61A5F9 50%);
+
+  animation-name: dostuff; 
+  animation-duration: 5s; 
+  animation-iteration-count: infinite;
+  transition-timing-function: ease-in-out;
+}
+
+
+@keyframes dostuff{
+  0%{
+    height: 60%;
+  }
+  50%{ 
+    height: 50%;
+  }
+  100%{ 
+    height: 60%;
+  }
+}
+
+
 
 .container {
   margin: 0 auto;
   max-width: 1200px;
+  width: 80%;
+
+  background-color: #167bf6;
 }
 
-/* HEADER */
+/* = = = HEADER = = = */
 
 .nav-bar {
   margin-top: 50px;
@@ -53,13 +90,12 @@ body {
   height: 20px;
   background-color: transparent;
   border: none;
-  background-image: url('../image/lupa.svg');
+  background-image: url('../image/magnifying-white.svg');
   background-repeat: no-repeat;
 }
 
 .nav-bar .input-button:hover {
-  background-image:  url('../image/lupa-hover.svg');
-  background-repeat: no-repeat;
+  opacity: .5;  
 }
 
 .link {
@@ -89,32 +125,22 @@ body {
   border-radius: 150px;
 
   box-shadow: 0 5px 20px #0000005e;
-
-
-
 }
 
-.primary-button:hover {
-  
-  position: absolute;
+/* = = = MAIN = = = */
 
-  background-color: firebrick ;
-  bottom: -5px;
-  box-shadow: none;
-}
+.main-header {
+  margin: 10rem 0 5rem;
 
-
-.section-1 {
   color: white;
-  /* display: flex; */
 }
 
-.img-escafanfo {
-  width: 200px;
+.main-header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem ;
 }
 
-
-/* ---- CATEGORIAS ---- */
+/* = = = CATEGORIES = = = */
 
 .categories {
   display: grid;
@@ -124,7 +150,9 @@ body {
 
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 10px
+  grid-gap: 10px;
+
+  margin-bottom: 15rem;
 }
 
 
@@ -135,25 +163,25 @@ body {
 
   border-top-right-radius: 20px;
 
-  border-bottom: 5px solid orange;
+  border-bottom: 5px solid black;
 }
 
 .category-icon {
   width: 40px;
   height: 40px;
-  background-color: orange;
+  background-color: black;
   border-radius: 5px;
 
   margin-bottom: 10px;
 }
 
 .category-link {
-  color: orangered;
+  color: grey;
   text-decoration: none;
 }
 
 .category-link span {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .category-link h4 {
@@ -174,5 +202,3 @@ body {
 .category-linkTecnology:hover {
   text-decoration: underline;
 }
-
-

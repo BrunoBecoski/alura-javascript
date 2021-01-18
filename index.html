@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/jpg" href="./image/a.jpg" />
+
+    <title>Alura - JavaScript</title>
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/index_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  </head>
+
+    <body class="container">
+
+        <header>
+
+          <div id="ocean"></div>
+
+          <div class="a">
+            <nav class="nav-bar">
+              <a href="/">
+                <h1 class="h1-logo">AluraScript</h1>
+              </a>
+              <form onsubmit="return handleSubmitSearch(event)">
+                <label for="course" >
+                  <input class="input" id="input-search" placeholder="O que você quer aprender ?">
+                  <button class="input-button" type="submit"></button>
+                </label>
+              </form>
+              <a class="link" href="/courses.html">Cursos</a>
+              <a class="link" href="#">Formações</a>
+              <a class="link" href="#">Para Empresas</a>
+              <a class="link" href="#">Como Funciona</a>
+              <a class="link" href="#">Entrar</a>
+              <button class="primary-button">Matricule-se</button>
+            </nav>
+          </div>
+
+        </header>
+
+        <main>
+
+          <div class="main-header">
+            <h1>Mergulhe em Tecnologia!</h1>
+            <p>Você vai estudar, praticar, discutir e se aprofundar em uma plataforma que respira tecnologia.</p>
+          </div>
+          
+          <div class="categories">
+
+            <div class="category-wrapper" style="border-color: var(--mobile-color)">
+              <a href="#" class="category-link" style="color: var(--mobile-color)">
+                <div class="category-icon" style="background-color: var(--mobile-color)">
+                </div>
+                <span>cursos de</span>
+                <h4>mobile</h4>
+              </a>
+              <div class="category-linkTecnologies">
+                <a href="#" class="category-linkTecnology">Flutter, React Native,</a>
+                <a href="#" class="category-linkTecnology">iOS e Swift,</a>
+                <a href="#" class="category-linkTecnology">Android, Kotlin,</a>
+                <a href="#" class="category-linkTecnology">Jogos</a>
+                <a href="#" class="category-linkTecnology">e mais...</a>
+              </div>
+            </div>            
+            
+            <div class="category-wrapper" style="border-color: var(--programming-color)">
+              <a href="#" class="category-link" style="color: var(--programming-color)">
+                <div class="category-icon" style="background-color: var(--programming-color)">
+                  </div>
+                <span>cursos de</span>
+                <h4>programação</h4>
+              </a>
+              <div class="category-linkTecnologies">
+                <a href="#" class="category-linkTecnology">Lógica,</a>
+                <a href="#" class="category-linkTecnology">Python,</a>
+                <a href="#" class="category-linkTecnology">PHP,</a>
+                <a href="#" class="category-linkTecnology">Java,</a>
+                <a href="#" class="category-linkTecnology">.NET,</a>
+                <a href="#" class="category-linkTecnology">Node JS,</a>
+                <a href="#" class="category-linkTecnology">Ruby & Rails,</a>
+                <a href="#" class="category-linkTecnology">C,</a>
+                <a href="#" class="category-linkTecnology">Computação,</a>
+                <a href="#" class="category-linkTecnology">Jogos</a>
+                <a href="#" class="category-linkTecnology">e mais...</a>
+              </div>
+            </div>            
+            
+            <div class="category-wrapper" style="border-color: var(--front-end-color)">
+              <a href="#" class="category-link" style="color: var(--front-end-color)">
+                <div class="category-icon" style="background-color: var(--front-end-color)">
+                  </div>
+                <span>cursos de</span>
+                <h4>front-end</h4>
+              </a>
+              <div class="category-linkTecnologies">
+                <a href="#" class="category-linkTecnology">HTML, CSS,</a>
+                <a href="#" class="category-linkTecnology">React,</a>
+                <a href="#" class="category-linkTecnology">Angular,</a>
+                <a href="#" class="category-linkTecnology">JavaScript,</a>
+                <a href="#" class="category-linkTecnology">jQuery,</a>
+                <a href="#" class="category-linkTecnology">e mais...</a>
+              </div>
+            </div>
+            
+            <div class="category-wrapper" style="border-color: var(--devops-color)">
+              <a href="#" class="category-link" style="color: var(--devops-color)">
+                <div class="category-icon" style="background-color: var(--devops-color)">
+                  </div>
+                <span>cursos de</span>
+                <h4>devops</h4>
+              </a>
+              <div class="category-linkTecnologies">
+                <a href="#" class="category-linkTecnology">Segurança,</a>
+                <a href="#" class="category-linkTecnology">Cloud,</a>
+                <a href="#" class="category-linkTecnology">Linux,</a>
+                <a href="#" class="category-linkTecnology">IoT,</a>
+                <a href="#" class="category-linkTecnology">Redes,</a>
+                <a href="#" class="category-linkTecnology">e mais...</a>
+              </div>
+            </div>            
+            
+            <div class="category-wrapper" style="border-color: var(--design-ux-color)">
+              <a href="#" class="category-link" style="color: var(--design-ux-color)">
+                <div class="category-icon" style="background-color: var(--design-ux-color)">
+                  </div>
+                <span>cursos de</span>
+                <h4>design & ux</h4>
+              </a>
+              <div class="category-linkTecnologies">
+                <a href="#" class="category-linkTecnology">Photoshop e Illustrator,</a>
+                <a href="#" class="category-linkTecnology">Usabilidade e UX,</a>
+                <a href="#" class="category-linkTecnology">Video e Motion,</a>
+                <a href="#" class="category-linkTecnology">3D</a>
+                <a href="#" class="category-linkTecnology">e mais...</a>
+              </div>
+            </div>            
+            
+            <div class="category-wrapper" style="border-color: var(--marketing-digital-color)">
+              <a href="#" class="category-link" style="color: var(--marketing-digital-color)">
+                <div class="category-icon" style="background-color: var(--marketing-digital-color)">
+                  </div>
+                <span>cursos de</span>
+                <h4>marketing digital</h4>
+              </a>
+              <div class="category-linkTecnologies">
+                <a href="#" class="category-linkTecnology">Ads,</a>
+                <a href="#" class="category-linkTecnology">Marketing,</a>
+                <a href="#" class="category-linkTecnology">SEO,</a>
+                <a href="#" class="category-linkTecnology">E-commerce,</a>
+                <a href="#" class="category-linkTecnology">Social Media,</a>
+                <a href="#" class="category-linkTecnology">YouTube</a>
+                <a href="#" class="category-linkTecnology">e mais...</a>
+              </div>
+            </div>            
+            
+            <div class="category-wrapper" style="border-color: var(--data-science-color)">
+              <a href="#" class="category-link" style="color: var(--data-science-color)">
+                <div class="category-icon" style="background-color: var(--data-science-color)">
+                  </div>
+                <span>cursos de</span>
+                <h4>data science</h4>
+              </a>
+              <div class="category-linkTecnologies">
+                <a href="#" class="category-linkTecnology">SQL e Banco de Dados,</a>
+                <a href="#" class="category-linkTecnology">NoSQL,</a>
+                <a href="#" class="category-linkTecnology">Data Science,</a>
+                <a href="#" class="category-linkTecnology">Machine Learning,</a>
+                <a href="#" class="category-linkTecnology">BI,</a>
+                <a href="#" class="category-linkTecnology">Estatísca,</a>
+                <a href="#" class="category-linkTecnology">Excel,</a>
+                <a href="#" class="category-linkTecnology">e mais...</a>
+              </div>
+            </div>
+            
+            <div class="category-wrapper" style="border-color: var(--innovation-management-color)">
+              <a href="#" class="category-link" style="color: var(--innovation-management-color)">
+                <div class="category-icon" style="background-color: var(--innovation-management-color)">
+                  </div>
+                <span>cursos de</span>
+                <h4>inovação & gestão</h4>
+              </a>
+              <div class="category-linkTecnologies">
+                <a href="#" class="category-linkTecnology">Métodos Ágeis,</a>
+                <a href="#" class="category-linkTecnology">Softskills,</a>
+                <a href="#" class="category-linkTecnology">Liderança e Gestão,</a>
+                <a href="#" class="category-linkTecnology">Startups,</a>
+                <a href="#" class="category-linkTecnology">Vendas,</a>
+                <a href="#" class="category-linkTecnology">e mais...</a>
+              </div>
+            </div>
+
+          </div>
+
+        </main>      
+        
+    </body>
+ 
+  <script src="./scripts/index_scripts.js"></script>
+</html>

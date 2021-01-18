@@ -1,22 +1,3 @@
-function wave() {
-  var ocean = document.getElementById("ocean"),
-  waveWidth = 5,
-  waveCount = Math.floor(window.innerWidth/waveWidth),
-  docFrag = document.createDocumentFragment();
-  
-  for(var i = 0; i < waveCount; i++){
-    var wave = document.createElement("div");
-    wave.className += " wave";
-    docFrag.appendChild(wave);
-    wave.style.left = i * waveWidth + "px";
-    wave.style.animationDelay = (i/100) + "s";
-  }
-  
-  ocean.appendChild(docFrag);
-}
-
-wave();
-
 const search = getQueryParams();
 
 const dataSearchJson = searchApi(search);
@@ -55,7 +36,7 @@ function handleSubmitSearch(event) {
 async function renderSearch(dataSearchJson) {
 
   let jsonData = await dataSearchJson.then(response => response);
-  console.log(jsonData.status)
+  console.log(jsonData.status);
 
   const h1 = document.querySelector("#h1");
 

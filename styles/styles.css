@@ -1,3 +1,18 @@
+:root {
+  --main-background-color: whitesmoke;
+  --main-color: #167bf6;
+
+  --mobile-color: #ffba05;
+  --programming-color: #00c86f;
+  --front-end-color: #6bd1ff;
+  --devops-color:  #f16165;
+  --design-ux-color: #dc6ebe;
+  --marketing-digital-color: #6b5be2;
+  --data-science-color: #9cd33b;
+  --innovation-management-color: #ff8c2a;
+}
+
+
 * {
   box-sizing: border-box;
   
@@ -6,4 +21,14 @@
   
   font-size: 18px;
   font-family: 'Open Sans', sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
 }
+
+
+
+.h1-logo {
+  color: white;
+  font-size: 1.8rem;
+}
+
