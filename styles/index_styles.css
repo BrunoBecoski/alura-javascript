@@ -2,11 +2,11 @@
 
 #ocean{
   z-index: -1;
-  min-height: 300px;
+  height: 250px;
   position: absolute;
   top: 0;
   left: 0;
-
+    
   width: 100%;
 }
 
@@ -23,7 +23,6 @@
   animation-iteration-count: infinite;
   transition-timing-function: ease-in-out;
 }
-
 
 @keyframes dostuff{
   0%{
@@ -116,10 +115,11 @@
   color: #167bf7;
   text-transform: uppercase;
   font-weight: 800;
+  font-size: .8rem;
   border: none;
 
-  height: 55px;
-  width: 200px;
+  height: 45px;
+  width: 175px;
 
   background-color: #a3ffbf;
   border-radius: 150px;
@@ -129,15 +129,22 @@
 
 /* = = = MAIN = = = */
 
-.main-header {
-  margin: 10rem 0 5rem;
+.section-header {
+
+  margin: 5rem 0 5rem;
 
   color: white;
 }
 
-.main-header h1 {
-  font-size: 1.5rem;
+.section-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
   margin-bottom: 1rem ;
+}
+
+.section-header p {
+  width: 35%;
+  font-size: 1.2rem;
 }
 
 /* = = = CATEGORIES = = = */
@@ -167,10 +174,14 @@
 }
 
 .category-icon {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background-color: black;
   border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   margin-bottom: 10px;
 }

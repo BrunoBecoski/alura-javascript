@@ -1,7 +1,7 @@
 function wave() {
   var ocean = document.getElementById("ocean"),
   waveWidth = 5,
-  waveCount = Math.floor(ocean.offsetWidth/waveWidth),
+  waveCount = Math.floor(ocean.scrollWidth/waveWidth),
   docFrag = document.createDocumentFragment();
   
   for(var i = 0; i < waveCount; i++){
@@ -11,7 +11,18 @@ function wave() {
     wave.style.left = i * waveWidth + "px";
     wave.style.animationDelay = (i/100) + "s";
   }
+
   
+  const oceanWidth = ocean.scrollWidth;
+  const waveWidthAll = waveCount * 5 - 5;
+  const waveLast = oceanWidth - waveWidthAll - 5;
+
+  var wave = document.createElement("div");
+  wave.className += "wave";
+  docFrag.appendChild(wave);
+  wave.style.left = waveWidthAll + waveLast + "px";
+  wave.style.animationDelay = (i/100) + "s";
+
   ocean.appendChild(docFrag);
 }
 

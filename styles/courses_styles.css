@@ -43,16 +43,16 @@ html {
 }
 
 .nav-bar .showAll {
-  color: black;
+  color: white;
   font-size: 18px;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid transparent;
 
 
   transition: border-bottom 0.5s;
 }
 
 .nav-bar .showAll:hover {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
 }
 
 
