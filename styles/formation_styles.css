@@ -2,6 +2,8 @@
   margin: 0 auto;
 }
 
+/* = = = SECTION HEADER = = = */
+
 .section-header {
   background-color: #2a7ae4;
 }
@@ -25,7 +27,7 @@
 .section-header h3 {
   max-width: 60%;
 
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
 }
 
@@ -41,14 +43,26 @@
   font-size: .8rem;
   font-weight: 700;
   text-transform: uppercase;
+
+  transition: transform .2s;
 }
 
+.section-header a:hover {
+  transform: rotate(360deg);
+}
+
+
+/* = = = SECTION CALL = = = */
+
 .section-call {
-  height: 200px;
+  height: auto;
+
 }
 
 
 .section-call-body {
+  text-align: center;
+
   display: flex; 
   align-items: center;
   justify-content: space-between;
@@ -59,5 +73,31 @@
   margin: 0 auto;
 
   color: #4a535a;
+}
 
+
+.section-call h3 {
+  margin: 0 2rem;
+  font-size: 1.2rem;
+
+}
+
+.section-call-body div {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-left: 2px solid rgba(128, 128, 128, 0.200);
+}
+
+.section-call-body div h6 {
+  margin-bottom: .5rem;
+}
+
+.section-call-body div p {
+  margin: 0 2rem;
+  font-weight: 400;
+  font-size: .8rem;
 }
