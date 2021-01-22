@@ -1,5 +1,7 @@
 .main-formation {
   margin: 0 auto;
+  background-color: whitesmoke; 
+
 }
 
 /* = = = SECTION HEADER = = = */
@@ -44,11 +46,11 @@
   font-weight: 700;
   text-transform: uppercase;
 
-  transition: transform .2s;
+  transition: transform .10s;
 }
 
 .section-header a:hover {
-  transform: rotate(360deg);
+  transform: scale(0.70);
 }
 
 
@@ -57,21 +59,20 @@
 .section-call {
   height: auto;
 
+  background-color: white;
 }
 
-
 .section-call-body {
-  text-align: center;
-
   display: flex; 
   align-items: center;
   justify-content: space-between;
-
+  
   height: 100%;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-
+  text-align: center;
+  
   color: #4a535a;
 }
 
@@ -79,11 +80,11 @@
 .section-call h3 {
   margin: 0 2rem;
   font-size: 1.2rem;
-
 }
 
 .section-call-body div {
   margin: 1.5rem 0;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,4 +101,55 @@
   margin: 0 2rem;
   font-weight: 400;
   font-size: .8rem;
+}
+
+/* = = = SECTION CONTENT = = = */
+
+.section-content .content  {
+  width: 80%;
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 3rem;
+  
+  background-color: white;
+}
+
+.section-content .content-title {
+  display: flex;
+  margin-bottom: 3rem;
+  
+  color: var(--color-var);
+}
+
+.section-content .content-title img { 
+  width: 4rem;
+  height: 4rem;
+  margin-right: 2rem;
+
+  border-bottom: 3px solid var(--color-var);
+}
+
+.section-content .content-title p {
+  display: block;
+  font-size: 1rem;
+}
+
+.section-content .content-title h3 {
+  font-size: 1.7rem;
+}
+
+.section-content .content-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.section-content .content-grid a {
+  font-size: .9rem;
+  color: grey;
+}
+
+.section-content .content-grid p{
+  font-size: .7rem;
+  color: grey;
 }
