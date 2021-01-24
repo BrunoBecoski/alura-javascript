@@ -121,7 +121,7 @@
             <img src="./image/icon-designUx.svg">
             <div>
               <p>Formações em</p>
-              <h3>Design & Ux</h3>
+              <h3>Ux & Design</h3>
             </div>
           </div>
           <div class="header-formation">
@@ -132,6 +132,23 @@
         <div class="content-grid" id="design-ux"></div> 
       </div>
 
+      <div class="content" style="--color-var: var(--data-science-color)">
+        <div class="content-header">
+          <div class="header-title">
+            <img src="image/icon-dataScience.svg">
+            <div>
+              <p>Formações em</p>
+              <h3>Data Science</h3>
+            </div>
+          </div>
+          <div class="header-formation">
+            <img src="./image/arrow-board.svg">
+            <p id="data-science-number"></p>
+          </div>
+        </div>
+        <div class="content-grid" id="data-science"></div>
+      </div>
+      
       <div class="content" style="--color-var: var(--marketing-digital-color)">
         <div class="content-header">
           <div class="header-title">
@@ -147,23 +164,6 @@
           </div>
         </div>
         <div class="content-grid" id="marketing-digital"></div>
-      </div>
-
-      <div class="content" style="--color-var: var(--data-science-color)">
-        <div class="content-header">
-          <div class="header-title">
-            <img src="image/icon-dataScience.svg">
-            <div>
-              <p>Formações em</p>
-              <h3>Data Science</h3>
-            </div>
-          </div>
-          <div class="header-formation">
-            <img src="./image/arrow-board.svg">
-             <p id="data-science-number"></p>
-          </div>
-        </div>
-        <div class="content-grid" id="data-science"></div>
       </div>
 
       <div class="content" style="--color-var: var(--innovation-management-color)">
@@ -185,11 +185,19 @@
     
     </section>
 
-    <section >
-    <label>
-      <input>
-      <button>enviar</button>
-    </label>
+    <section class="section-search">
+    
+      <label class="search-label">
+        <div class="label-text">
+          <p>Se ainda assim não encontrou,</p> 
+          <p>hoje temos <span id="course-number">X</span> cursos!</p>
+        </div>
+        <form class="label-form">
+          <input placeholder="Qual cursos você procura?">
+          <button>buscar</button>
+        </form>
+      </label>
+
     </section>
 
     <footer style="margin-top: 200px; width: 100%; height: 30%; background-color: grey"></footer>
