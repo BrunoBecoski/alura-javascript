@@ -16,7 +16,6 @@
   <body>
    <script src="components/header.js"></script>
 
-
    <main class="main-formation">
 
     <section class="section-header">
@@ -192,18 +191,38 @@
           <p>Se ainda assim não encontrou,</p> 
           <p>hoje temos <span id="course-number">X</span> cursos!</p>
         </div>
-        <form class="label-form">
-          <input placeholder="Qual cursos você procura?">
-          <button>buscar</button>
+        <form class="label-form" onsubmit="return handleSubmitSearch(event)">
+          <input id="input-search" placeholder="Qual cursos você procura?">
+          <button type="submit">buscar</button>
         </form>
       </label>
 
     </section>
 
-    <footer style="margin-top: 200px; width: 100%; height: 30%; background-color: grey"></footer>
+    <footer style="
+      margin-top: 100px; 
+      width: 100%; 
+      height: 150px; 
+      background-color: #167bf7;
+      display: flex;
+      justify-content: center;
+      align-items: center;    
+    ">
+      <a href="/#">
+        <h1 style="
+          color: white;
+          font-size: 3rem;
+          font-weight: 700;
+          ">
+          AluraScript
+        </h1>
+      </a>
+    </footer>
 
    </main>
   </body>
 
   <script type="module" src="./scripts/formation_scripts.js"></script>
+  <script src="./scripts/input_search.js"></script>
+
 </html>

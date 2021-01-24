@@ -2,7 +2,7 @@ import requestData from './import_api.js';
 
 async function requestApi() {
   return await requestData('https://www.alura.com.br/api/formacoes');
-} 
+}
 
 render() 
 
@@ -138,5 +138,4 @@ async function render() {
       divSelect.appendChild(divCreate);
     });  
   });
-
 }

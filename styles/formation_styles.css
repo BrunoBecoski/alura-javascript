@@ -46,11 +46,11 @@
   font-weight: 700;
   text-transform: uppercase;
 
-  transition: transform .10s;
+  transition: transform .100s;
 }
 
 .section-header a:hover {
-  transform: scale(0.70);
+  transform: translateY(3px);
 }
 
 
@@ -216,12 +216,44 @@
   width: 90%;
   max-width: 1200px;
   height: 200px;
+
+  position: relative;
   
   margin: 0 auto;
   margin-top: 3rem;
 
   background: linear-gradient(90deg, #3e8bcd 33%, #71bde7 66% );
 }
+
+.section-search::before {
+  content: '';
+
+  position: absolute;
+  width: 50px;
+  height: 50px;
+    
+  top: -10px;
+  left: -10px;
+  
+  border-top: 10px solid #ffcd46;
+  border-left: 10px solid #ffcd46;
+}
+
+.section-search::after {
+  content: '';
+
+  width: 50px;
+  height: 50px;
+
+  position: absolute;
+
+  right: -10px;
+  bottom: -10px;
+  
+  border-right: 10px solid #ffcd46;
+  border-bottom: 10px solid #ffcd46;
+}
+
 
 .search-label {
   width: 100%;
@@ -283,6 +315,7 @@
   color: #60addf;
   background-color: white;
 }
+
 .label-form button:hover {
   color: #3e8bcd;
 }
