@@ -1,15 +1,40 @@
-import requestData from './import_api.js';
+import requestData from './apiRequest.js';
 
 async function requestApi() {
-  return await requestData('https://www.alura.com.br/api/formacoes');
+
+  const url = 'https://www.alura.com.br/api/formacoes';
+  const dataResponse = await requestData(url);
+
+  if(dataResponse.status === 200) {
+    console.log('Status: 200');
+    render(dataResponse); 
+  } else {
+    console.log('Status: 400')
+    console.log(dataResponse.data);
+    renderError();
+  }
 }
 
-render() 
+requestApi();
 
-async function render() {
+function renderError() {
+  const span = document.querySelector("#span");
+  const h1 = document.createElement("h1");
 
-  const dataResponse = await requestApi()
-  const body = dataResponse.body;
+  h1.innerText = "Não foi possível se conectar com o servidor, por favor tente novamente."
+  h1.style.cssText = `
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  `;
+
+  span.appendChild(h1);
+}
+
+async function render(dataResponse) {
+
+  const body = dataResponse.data;
   
   let devops = []; 
   let mobile = []; 
