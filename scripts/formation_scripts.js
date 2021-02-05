@@ -6,16 +6,17 @@ async function requestApi() {
   const dataResponse = await requestData(url);
 
   if(dataResponse.status === 200) {
-    console.log('Status: 200');
+    console.log('HTTP Status: ' + dataResponse.status);
     render(dataResponse); 
   } else {
-    console.log('Status: 400')
+    console.log('HTTP Status: ' + dataResponse.status);
     console.log(dataResponse.data);
     renderError();
   }
 }
 
 requestApi();
+renderNumberCourse();
 
 function renderError() {
   const span = document.querySelector("#span");
@@ -163,4 +164,22 @@ async function render(dataResponse) {
       divSelect.appendChild(divCreate);
     });  
   });
+}
+
+async function renderNumberCourse() {
+
+  const url = 'https://www.alura.com.br/api/cursos'
+  const dataResponse = await requestData(url); 
+
+  const  span = document.getElementById('course-number');
+
+  if(dataResponse.status === 200) {
+    console.log('HTTP Status: ' + dataResponse.status);
+    span.innerText = dataResponse.data.length;
+  } else {
+    console.log('HTTP Status: ' + dataResponse.status);
+    console.log(dataResponse.data);
+    span.innerText = 'X';
+  }
+
 }

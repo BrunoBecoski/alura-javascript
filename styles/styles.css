@@ -1,15 +1,15 @@
 :root {
-  --main-background-color: whitesmoke;
+  --mainBackground-color: whitesmoke;
   --main-color: #167bf6;
 
   --mobile-color: #ffba05;
   --programming-color: #00c86f;
-  --front-end-color: #6bd1ff;
-  --devops-color:  #f16165;
-  --design-ux-color: #dc6ebe;
-  --marketing-digital-color: #6b5be2;
-  --data-science-color: #9cd33b;
-  --innovation-management-color: #ff8c2a;
+  --frontEnd-color: #6bd1ff;
+  --devOps-color:  #f16165;
+  --designUx-color: #dc6ebe;
+  --marketingDigital-color: #6b5be2;
+  --dataScience-color: #9cd33b;
+  --innovatioManagement-color: #ff8c2a;
 }
 
 

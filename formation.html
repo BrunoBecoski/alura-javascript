@@ -9,12 +9,72 @@
     <title>Formação - AluraScript</title>
 
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/header_styles.css">
     <link rel="stylesheet" href="./styles/formation_styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
   </head>
 
   <body>
    <main class="main-formation">
+
+    <header class="header">
+      
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <h1><a href="/">AluraScript</a></h1>
+          </li>
+          <li>
+            <form onsubmit="return handleSubmitSearch(event)">
+              <label for="search-course" >
+                <input class="input" id="input-search" placeholder="O que você quer aprender?">
+                <button class="input-button" type="submit"></button>
+              </label>
+            </form>
+          </li>
+          <li>
+            <a href="/courses.html">Cursos</a>
+          </li>
+          <li>
+            <a href="/formation.html">Formações</a>
+          </li>
+          <li>
+            <a href="#">Dev em &ltT&gt</a> 
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-formation">
+        <ul>
+          <li>
+            <a href="#" style="--color-var: var(--mobile-color)">Mobile</a>
+          </li>          
+          <li>
+            <a href="#" style="--color-var: var(--programming-color)" >Programação</a>
+          </li>          
+          <li>
+            <a href="#"  style="--color-var: var(--frontEnd-color)" >Front-end</a>
+          </li>          
+          <li>
+            <a href="#"  style="--color-var: var(--devOps-color)" >DevOps</a>
+          </li>          
+          <li>
+            <a href="#"  style="--color-var: var(--dataScience-color)" >Design & Ux</a>
+          </li>          
+          <li>
+            <a href="#"  style="--color-var: var(--marketingDigital-color)" >Marketing Digital</a>
+          </li>          
+          <li>
+            <a href="#"  style="--color-var: var(--dataScience-color)" >Data Science</a>
+          </li>          
+          <li>
+            <a href="#"  style="--color-var: var(--innovatioManagement-color)" >Inovação & Gestão</a>
+          </li>
+        </ul>
+      </div>
+
+
+    </header>
 
     <section class="section-header">
       <div class="section-header-body">
@@ -80,7 +140,7 @@
         <div class="content-grid" id="programacao"></div>
       </div>
 
-      <div class="content" style="--color-var: var(--front-end-color)">
+      <div class="content" style="--color-var: var(--frontEnd-color)">
         <div class="content-header">
           <div class="header-title">
             <img src="./image/icon-frontEnd.svg">
@@ -97,7 +157,7 @@
         <div class="content-grid" id="front-end"></div>
       </div>
 
-      <div class="content" style="--color-var: var(--devops-color)">
+      <div class="content" style="--color-var: var(--devOps-color)">
         <div class="content-header">
           <div class="header-title">
             <img src="./image/icon-devOps.svg">
@@ -114,7 +174,7 @@
         <div class="content-grid" id="devops"></div>
       </div>
 
-      <div class="content" style="--color-var: var(--design-ux-color)">
+      <div class="content" style="--color-var: var(--designUx-color)">
         <div class="content-header">
           <div class="header-title">
             <img src="./image/icon-designUx.svg">
@@ -131,7 +191,7 @@
         <div class="content-grid" id="design-ux"></div> 
       </div>
 
-      <div class="content" style="--color-var: var(--data-science-color)">
+      <div class="content" style="--color-var: var(--dataScience-color)">
         <div class="content-header">
           <div class="header-title">
             <img src="image/icon-dataScience.svg">
@@ -148,7 +208,7 @@
         <div class="content-grid" id="data-science"></div>
       </div>
       
-      <div class="content" style="--color-var: var(--marketing-digital-color)">
+      <div class="content" style="--color-var: var(--marketingDigital-color)">
         <div class="content-header">
           <div class="header-title">
             <img src="./image/icon-marketingDigital.svg">
@@ -165,7 +225,7 @@
         <div class="content-grid" id="marketing-digital"></div>
       </div>
 
-      <div class="content" style="--color-var: var(--innovation-management-color)">
+      <div class="content" style="--color-var: var(--innovatioManagement-color)">
         <div class="content-header">
           <div class="header-title">
             <img src="./image/icon-innovationManagement.svg">
@@ -189,7 +249,7 @@
       <label class="search-label">
         <div class="label-text">
           <p>Se ainda assim não encontrou,</p> 
-          <p>hoje temos <span id="course-number">X</span> cursos!</p>
+          <p>hoje temos <span id="course-number"></span> cursos!</p>
         </div>
         <form class="label-form" onsubmit="return handleSubmitSearch(event)">
           <input id="input-search" placeholder="Qual cursos você procura?">
@@ -222,6 +282,7 @@
    </main>
   </body>
 
+  <script src="scripts/input_search.js"></script>
   <script type="module" src="./scripts/formation_scripts.js"></script>
   <script src="./scripts/input_search.js"></script>
 
