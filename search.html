@@ -9,42 +9,81 @@
     <title>Alura - Busca</title>
 
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/header_styles.css">
     <link rel="stylesheet" href="./styles/search_styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
   </head>
 
-  <header>
-    <div class="nav-background"></div>
-    <nav class="nav-bar">
-      <a href="/">
-        <h1 class="h1-logo">AluraScript</h1>
-      </a>
+  <body>
 
-      <form onsubmit="return handleSubmitSearch(event)">
-        <label class="label-search" for="course" >
-          <input id="input-search" placeholder="Procure por outros cursos ?">
-          <button type="submit"></button>
-        </label>
-      </form>
+    <header class="header" id="header">
+      <nav class="nav-bar">
+        <ul>
+          <li>
+            <h1><a href="/">AluraScript</a></h1>
+          </li>
+          <li>
+            <form onsubmit="return handleSubmitSearch(event)">
+              <label for="search-course" >
+                <input class="input" id="input-search" placeholder="O que você quer aprender?">
+                <button class="input-button" type="submit"></button>
+              </label>
+            </form>
+          </li>
+          <li>
+            <a href="/courses.html">Cursos</a>
+          </li>
+          <li>
+            <a href="/formation.html">Formações</a>
+          </li>
+          <li>
+            <a href="#">Dev em &ltT&gt</a> 
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-formation">
+        <ul>
+          <li>
+            <a href="#" style="--color-var: var(--mobile-color)">Mobile</a>
+          </li>          
+          <li>
+            <a href="#" style="--color-var: var(--programming-color)" >Programação</a>
+          </li>          
+          <li>
+            <a href="#"  style="--color-var: var(--frontEnd-color)" >Front-end</a>
+          </li>          
+          <li>
+            <a href="#"  style="--color-var: var(--devOps-color)" >DevOps</a>
+          </li>          
+          <li>
+            <a href="#"  style="--color-var: var(--dataScience-color)" >Design & Ux</a>
+          </li>          
+          <li>
+            <a href="#"  style="--color-var: var(--marketingDigital-color)" >Marketing Digital</a>
+          </li>          
+          <li>
+            <a href="#"  style="--color-var: var(--dataScience-color)" >Data Science</a>
+          </li>          
+          <li>
+            <a href="#"  style="--color-var: var(--innovatioManagement-color)" >Inovação & Gestão</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main class="container" id="main">
+      <h1 id="h1"></h1>
+
+      <ul class="ul-list" id="ul"></ul>
       
-      <a class="a-showAll" href="courses.html">Mostrar todos os cursos</a>
-    </nav>
-  </header>
-
-    <body class="container">
-
-      <main id="main">
-        <h1 id="h1"></h1>
-
-        <ul class="ul-list" id="ul"></ul>
-        
-      </main>
+    </main>
 
     </body>
 
     <footer>
-        <a href="#ocean">Volta ao topo</a>
+        <a href="#header">Volta ao topo</a>
     </footer>
  
     <script src="./scripts/search_scripts.js"></script>
