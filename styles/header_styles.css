@@ -32,14 +32,31 @@
   font-weight: 700;
   font-size: 1.8rem;
   text-transform: none;
-  
-  transition: color .3s;
+
+  transition: .3s;
 }
 
 .nav-bar h1 a:hover {
   color: var(--main-color);
 }
 
+@media (-webkit-min-device-pixel-ratio:0) {
+
+  .nav-bar h1 a {
+    background-color: black;
+    background-image: -webkit-linear-gradient(left, var(--main-color) 0%, var(--main-color) 50%, transparent 50%);
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    color: transparent;
+    transition: .3s;
+    background-clip: text;
+  }
+  .nav-bar h1 a:hover {
+    background-position: 0 0;
+    color: transparent;
+    transition: .3s;
+  }
+}
 
 .nav-bar form label {
   width: 30vw;
