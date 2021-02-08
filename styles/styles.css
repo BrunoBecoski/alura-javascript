@@ -25,3 +25,7 @@
   scroll-behavior: smooth;
   font-family: 'Open Sans', sans-serif;
 }
+
+body {
+  background-color: var(--mainBackground-color);
+}

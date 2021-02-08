@@ -4,7 +4,6 @@
   background-color: #ffffff;
 }
 
-
 .header a {
   padding: 15px;
 }
@@ -51,7 +50,7 @@
     transition: .3s;
     background-clip: text;
   }
-  .nav-bar h1 a:hover {
+  .nav-bar h1 a:hover { 
     background-position: 0 0;
     color: transparent;
     transition: .3s;
