@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/header_styles.css">
     <link rel="stylesheet" href="./styles/search_styles.css">
+    <link rel="stylesheet" href="./styles/footer_styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
   </head>
 
   <body>
 
-    <header class="header" id="header">
+    <header class="header">
       <nav class="nav-bar">
         <ul>
           <li>
@@ -74,17 +75,39 @@
     </header>
 
     <main class="container" id="main">
+
+      <span id="span"></span>
+
       <h1 id="h1"></h1>
 
       <ul class="ul-list" id="ul"></ul>
       
     </main>
 
-    </body>
-
-    <footer>
-        <a href="#header">Volta ao topo</a>
+    <footer class="footer">
+      <div class="footer-container">
+        <h2><a href="/">AluraScript</a></h2>
+        
+        <ul class="footer-list">
+          <h3>Navegação</h3>
+          <li>
+            <a href="/courses.html">Cursos</a>
+          </li>
+          <li>
+            <a href="/formation.html">Formações</a>
+          </li>
+          <li>
+            <a href="#">Dev em &ltT&gt</a> 
+          </li>   
+          <li>
+            <a href="#">Voltar para a topo</a>
+          </li>
+        </ul>
+      </div>
     </footer>
- 
-    <script src="./scripts/search_scripts.js"></script>
-  </html>
+
+  </body>
+    
+  <script type="module" src="./scripts/search_scripts.js"></script>
+</html>
+    

@@ -28,6 +28,7 @@ function renderError() {
     align-items: center;
     justify-content: center;
     margin-top: 100px;
+    font-size: 24px;
   `;
 
   span.appendChild(h1);

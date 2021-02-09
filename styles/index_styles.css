@@ -36,6 +36,10 @@
   }
 }
 
+body {
+  background-color: var(--main-color);
+}
+
 
 
 .container {
@@ -49,11 +53,20 @@
 /* = = = HEADER = = = */
 
 .nav-bar {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 80%;
+
   margin-top: 50px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.h1-logo {
+  color: white;
+  font-size: 1.5rem;
 }
 
 .nav-bar form label {

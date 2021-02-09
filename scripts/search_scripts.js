@@ -1,8 +1,8 @@
+import requestData from './apiRequest.js';
+
 const search = getQueryParams();
 
-const dataSearchJson = searchApi(search);
-
-renderSearch(dataSearchJson);
+requestApi();
 
 function getQueryParams() {
   const params = new URLSearchParams(document.location.search.substring(1));
@@ -10,42 +10,29 @@ function getQueryParams() {
   return search;
 }
 
-async function searchApi(search) {
-  const urlApi = `https://cursos.alura.com.br/api/search?query=${search}`;
-  return fetch(urlApi)
-    .then(async response => 
-      response.json()
-      .then(
-        body => ({
-          body,
-          status: response.status
-        })
-      )
-    )
+async function requestApi() {
+
+  const url = `https://cursos.alura.com.br/api/search?query=${search}`;
+  const dataResponse = await requestData(url);
+
+  if(dataResponse.status === 200) {
+    console.log('HTTP Status: ' + dataResponse.status);
+    renderSearch(dataResponse); 
+  } else {
+    console.log('HTTP Status: ' + dataResponse.status);
+    console.log(dataResponse.data);
+    renderError();
+  }
 }
 
-function handleSubmitSearch(event) {
-
-  event.preventDefault();
-
-  const searchValue = document.getElementById("input-search").value;
-
-  window.location.href = `http://127.0.0.1:5500/search.html?search=${searchValue}`;
-}
-
-async function renderSearch(dataSearchJson) {
-
-  let jsonData = await dataSearchJson.then(response => response);
-  console.log(jsonData.status);
+async function renderSearch(dataResponse) {
 
   const h1 = document.querySelector("#h1");
 
   h1.innerText = search;
   
-  jsonData.body.results.filter(data => {
+  dataResponse.data.results.filter(data => {
     
-    console.log(data);
-
     const ul = document.querySelector("#ul");
 
     const a = document.createElement("a");
@@ -80,4 +67,24 @@ async function renderSearch(dataSearchJson) {
 
     ul.appendChild(li);
   })
+}
+
+function renderError() {
+  const span = document.querySelector("#span");
+  const h1 = document.createElement("h1");
+
+  h1.innerText = "Não foi possível se conectar com o servidor, por favor tente novamente."
+  h1.style.cssText = `
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    font-size: 24px;
+  `;
+
+  span.appendChild(h1);
+
+  const h1Title = document.querySelector("#h1");
+
+  h1Title.innerText = '';
 }

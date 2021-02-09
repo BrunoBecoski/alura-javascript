@@ -5,13 +5,15 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/header_styles.css">
     <link rel="stylesheet" href="./styles/courses_styles.css">
+    <link rel="stylesheet" href="./styles/footer_styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/jpg" href="./image/a.jpg" />
     <title>Cursos - AluraScript</title>
   </head>
   
   <body>
-    <header class="header" id="header">
+
+    <header class="header">
       <nav class="nav-bar">
         <ul>
           <li>
@@ -70,22 +72,39 @@
     <main class="container">
 
       <div class="top" title="Voltar para o topo">
-        <a class="arrow-top" href="#header"><a/>
+        <a class="arrow-top" href="#header"></a>
       </div>
 
       <h1 id="title"></h1>
 
-      
-      <div class="letters">
+      <div class="letters"></div>
 
+      <ul id="list"></ul> 
+
+    </main> 
+
+    <footer class="footer">
+      <div class="footer-container">
+        <h2><a href="/">AluraScript</a></h2>
+
+        <ul class="footer-list">
+          <h3>Navegação</h3>
+          <li>
+            <a href="#">Cursos</a>
+          </li>
+          <li>
+            <a href="/formation.html">Formações</a>
+          </li>
+          <li>
+            <a href="#">Dev em &ltT&gt</a> 
+          </li>   
+          <li>
+            <a href="#">Voltar para a topo</a>
+          </li>
+        </ul>
       </div>
+    </footer>
 
-      <ul id="list">
-
-      </ul> 
-
-
-    </main>
-    <script src="./scripts/courses_scripts.js" ></script>
-</body>
+  </body>
+  <script src="./scripts/courses_scripts.js" ></script>
 </html>
