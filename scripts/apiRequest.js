@@ -1,4 +1,4 @@
-export default async  function requestApi(urlApi) {
+export default async function requestApi(urlApi) {
 
   const fetchData = await fetch(urlApi)
     .then(response => response)

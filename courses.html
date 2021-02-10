@@ -21,7 +21,7 @@
           </li>
           <li>
             <form onsubmit="return handleSubmitSearch(event)">
-              <label for="search-course" >
+              <label for="input-search" >
                 <input class="input" id="input-search" placeholder="O que você quer aprender?">
                 <button class="input-button" type="submit"></button>
               </label>
@@ -72,8 +72,17 @@
     <main class="container">
 
       <div class="top" title="Voltar para o topo">
-        <a class="arrow-top" href="#header"></a>
+        <a class="arrow-top" href="#"></a>
       </div>
+
+      <span id="span-error"></span>
+
+      <form class="form-courses" onsubmit="return handleSubmitCourses(event)">
+        <label for="input-courses">
+          <input id="input-courses" placeholder="Qual curso está procurando?">
+          <button type="submit"></button>
+        </label>
+      </form>
 
       <h1 id="title"></h1>
 
@@ -106,5 +115,8 @@
     </footer>
 
   </body>
-  <script src="./scripts/courses_scripts.js" ></script>
+  
+  <script src="./scripts/input_search.js"></script>
+  <script type="module" src="./scripts/courses_scripts.js"></script>
+
 </html>

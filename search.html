@@ -26,7 +26,7 @@
           </li>
           <li>
             <form onsubmit="return handleSubmitSearch(event)">
-              <label for="search-course" >
+              <label for="input-search" >
                 <input class="input" id="input-search" placeholder="O que você quer aprender?">
                 <button class="input-button" type="submit"></button>
               </label>
@@ -76,7 +76,7 @@
 
     <main class="container" id="main">
 
-      <span id="span"></span>
+      <span id="span-error"></span>
 
       <h1 id="h1"></h1>
 
@@ -107,7 +107,9 @@
     </footer>
 
   </body>
-    
+
+  <script src="./scripts/input_search.js"></script>  
   <script type="module" src="./scripts/search_scripts.js"></script>
+
 </html>
     

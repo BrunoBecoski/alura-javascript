@@ -1,28 +1,6 @@
-const url = 'https://www.alura.com.br/api/cursos';
-
-requestAPI(url);
+import requestData from './apiRequest.js';
 
 const search = getQueryParams();
-
-function handleSubmitSearch(event) {
-
-  event.preventDefault();
-
-  const searchValue = document.getElementById("input-search").value;
-
-  window.location.href = `http://127.0.0.1:5500/courses.html?name=${searchValue}`;
-}
-
-function requestAPI(urlAPI) {
-  fetch(urlAPI)
-    .then(response => {
-      console.log('Request successful');
-      response.json()
-        .then(cursos => {
-          render(cursos);
-        });
-    });
-}
 
 function getQueryParams() {
   const params = new URLSearchParams(document.location.search.substring(1));
@@ -30,24 +8,44 @@ function getQueryParams() {
   return search;
 }
 
-function render(cursos) {
+async function requestApi() {
+
+  const url = 'https://www.alura.com.br/api/cursos';
+  const dataResponse = await requestData(url);
+
+  if(dataResponse.status === 200) {
+    console.log('HTTP Status: ' + dataResponse.status);
+    render(dataResponse); 
+  } else {
+    console.log('HTTP Status: ' + dataResponse.status);
+    console.log(dataResponse.data);
+    renderError();
+  }
+}
+
+requestApi();
+
+
+
+
+function render(dataResponse) {
 
   if (!search) {
-    renderCursos(cursos);
+    renderCourses(dataResponse);
   } else {
-    renderSearch(cursos);
+    renderSearch(dataResponse);
   }
 
 }
 
-function renderCursos(data) {
+function renderCourses(dataResponse) {
 
   const mainUl = document.querySelector("#list");
 
   const h1 = document.querySelector("#title");
   h1.innerText = "Cursos";
   
-  data.forEach(curso => {
+  dataResponse.data.forEach(curso => {
       
     const name = formatRegex(curso);
 
@@ -121,7 +119,7 @@ function createShortcut(letter) {
   div[0].appendChild(a);
 }
 
-function renderSearch(cursos) {
+function renderSearch(dataResponse) {
   
   const mainUl = document.querySelector("#list");
   const newUl = document.createElement("ul");
@@ -134,7 +132,7 @@ function renderSearch(cursos) {
   
   let count = 0;
 
-  cursos.forEach(curso => {
+  dataResponse.data.forEach(curso => {
 
     const lowerCaseName = curso.nome.toLowerCase();
     const lowerCaseSearch = search.toLowerCase();
@@ -156,3 +154,25 @@ function renderSearch(cursos) {
   }
 
 }
+
+function renderError() {
+  const span = document.querySelector("#span-error");
+  const h1 = document.createElement("h1");
+
+  h1.innerText = "Não foi possível se conectar com o servidor, por favor tente novamente."
+  h1.style.cssText = `
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    font-size: 24px;
+  `;
+
+  span.appendChild(h1);
+
+  const h1Title = document.querySelector("#h1");
+
+  h1Title.innerText = '';
+}
+
+

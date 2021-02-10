@@ -18,14 +18,14 @@ main h1 {
   margin: 2rem 0;
 
   font-size: 1.8rem;
+  
 }
 
+main h1::first-letter {
+  text-transform: uppercase;
+}
 
 /* = = = UL-LIST = = = */
-
-.ul-list li {
-
-}
 
 .ul-list > li {
   border: 5px double #6D39ED;

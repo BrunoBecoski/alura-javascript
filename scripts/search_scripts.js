@@ -70,7 +70,7 @@ async function renderSearch(dataResponse) {
 }
 
 function renderError() {
-  const span = document.querySelector("#span");
+  const span = document.querySelector("#span-error");
   const h1 = document.createElement("h1");
 
   h1.innerText = "Não foi possível se conectar com o servidor, por favor tente novamente."

@@ -41,9 +41,73 @@
 #title {
   font-size: 50px;
 
-  padding: 50px 0;
+  padding: 30px 0;
 }
 
+#title::first-letter {
+  text-transform: uppercase;
+}
+
+.form-courses {
+  margin-top: 50px;
+}
+
+.form-courses label {
+  padding: 10px;
+  border: 2px solid grey;
+
+  width: 30%;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 5px;
+}
+
+.form-courses label:focus-within {
+  border-color: black;
+}
+
+
+.form-courses input {
+  width: 90%;
+  border: none;
+
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.form-courses input::placeholder {
+  font-size: .8rem;
+}
+
+.form-courses input:focus {
+  outline: none;
+}
+
+.form-courses label button {
+
+  width: 21px;
+  height: 20px;
+
+  border: none;
+  background-color: transparent;
+  background-image: url(../image/magnifying-black.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  cursor: pointer;
+
+  opacity: .5;  
+}
+
+.form-courses label button:hover {
+  opacity: 1;
+}
 
 
 /* LETTERS */
