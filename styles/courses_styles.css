@@ -40,8 +40,6 @@
 
 #title {
   font-size: 50px;
-
-  padding: 30px 0;
 }
 
 #title::first-letter {
@@ -57,6 +55,8 @@
   border: 2px solid grey;
 
   width: 30%;
+
+  margin: 30px 0;
 
   cursor: pointer;
 
@@ -90,13 +90,12 @@
 
 .form-courses label button {
 
-  width: 21px;
+  width: 20px;
   height: 20px;
 
   border: none;
   background-color: transparent;
   background-image: url(../image/magnifying-black.svg);
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -112,12 +111,24 @@
 
 /* LETTERS */
 
+.fixed {
+  width: 80%;
+  top: -15;
+  position: fixed;
+  margin: auto;
+}
+
 .letters {
   display: flex;
   justify-content: space-evenly;
-
+  
   flex-wrap: wrap;
-  padding-top: 15px;
+  padding: 10px 0;
+  
+  margin: 15px 0;
+
+  background-color: white;
+  border: 3px solid black;
 
 }
 
@@ -127,16 +138,15 @@
   text-decoration: none;
   font-weight: bold;
 
-  border: 3px solid grey;
   padding: 2px 5px;
   margin-left: 5px;
 
-  transition: color 0.5s, border-color 0.5s;
+  transition: color 0.5s;
 }
 
 .letters a:hover {
-  color: black;
-  border-color: black;
+  color: var(--main-color);
+  text-shadow: 0 0 25px var(--main-color);
 }
 
 /* UL LI */

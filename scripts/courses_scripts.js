@@ -25,8 +25,20 @@ async function requestApi() {
 
 requestApi();
 
+setInterval(fixedLetters, 10);
 
+function fixedLetters() {
 
+  const body = document.querySelector('body')
+  const letters = document.getElementById('letters');
+  const scrollTop = body.scrollTop;
+  
+  if(scrollTop >= 400) {
+    letters.classList.add('fixed');
+  } else {
+    letters.classList.remove('fixed');
+  }
+}
 
 function render(dataResponse) {
 
