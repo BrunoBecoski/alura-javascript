@@ -47,13 +47,13 @@
     background-position: 100% 0;
     background-size: 200% 200%;
     color: transparent;
-    transition: .3s;
+    transition: .8s;
     background-clip: text;
   }
   .nav-bar h1 a:hover { 
     background-position: 0 0;
     color: transparent;
-    transition: .3s;
+    transition: .8s;
   }
 }
 

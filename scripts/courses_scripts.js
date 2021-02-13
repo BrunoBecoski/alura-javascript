@@ -33,7 +33,7 @@ function fixedLetters() {
   const letters = document.getElementById('letters');
   const scrollTop = body.scrollTop;
   
-  if(scrollTop >= 400) {
+  if(scrollTop >= 300) {
     letters.classList.add('fixed');
   } else {
     letters.classList.remove('fixed');
@@ -53,9 +53,6 @@ function render(dataResponse) {
 function renderCourses(dataResponse) {
 
   const mainUl = document.querySelector("#list");
-
-  const h1 = document.querySelector("#title");
-  h1.innerText = "Cursos";
   
   dataResponse.data.forEach(curso => {
       
@@ -64,12 +61,23 @@ function renderCourses(dataResponse) {
     createShortcut(name);
     
     if(!document.getElementById(name)) {
-      
+    
       const newUl = document.createElement("ul");
+      const newDiv = document.createElement("div")
+      const newH3 = document.createElement("h3");
+      const newP = document.createElement("p");
+      const newSpan = document.createElement("span");
 
       newUl.id = name;
-      newUl.innerText = name;
-  
+      newH3.innerText = name;
+      newP.innerText = 'X Cursos';
+
+      newDiv.classList.add("header-courses")
+
+      newDiv.appendChild(newH3);
+      newDiv.appendChild(newP);
+      newDiv.appendChild(newSpan);
+      newUl.appendChild(newDiv);
       mainUl.appendChild(newUl);
   
       const li = document.createElement("li");
@@ -81,7 +89,6 @@ function renderCourses(dataResponse) {
     } else {
 
       const newUl = document.getElementById(name);
-
       const li = document.createElement("li");
   
       li.innerHTML =  strong(curso.nome);
