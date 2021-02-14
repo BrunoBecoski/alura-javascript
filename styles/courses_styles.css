@@ -16,6 +16,7 @@
 /* h1 */
 
 #title {
+  margin-top: 25px;
   font-size: 50px;
 }
 
@@ -23,65 +24,54 @@
   text-transform: uppercase;
 }
 
-.form-courses {
-  margin-top: 50px;
-}
-
 .form-courses label {
-  padding: 10px;
-  border: 2px solid black;
-
-  width: 30%;
-
+  width: 50%;
   margin: 30px 0;
 
-  cursor: pointer;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
+  cursor: pointer;
 }
-
-.form-courses label:focus-within {
-  border: 2px solid var(--main-color);
-}
-
 
 .form-courses input {
-  width: 90%;
-  border: none;
+  width: 66%;
+  padding: 10px;
 
   font-size: 1rem;
-  background-color: transparent;
+  background-color: white;
+
+  border: 1px solid black;
+}
+
+.form-courses input:focus {
+  outline: none;
+  border: 2px solid var(--main-color);
 }
 
 .form-courses input::placeholder {
   font-size: .8rem;
 }
 
-.form-courses input:focus {
-  outline: none;
-}
-
 .form-courses label button {
+  width: 33%;
+  padding: calc(9px + .2rem);
 
-  width: 20px;
-  height: 20px;
-
-  border: none;
-  background-color: transparent;
-  background-image: url(../image/magnifying-blue.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-
+  font-size: .8rem;
+  font-weight: bold;
+  color: var(--main-color);
   cursor: pointer;
+  background-color: white;
 
-  filter: grayscale(1)  
+  border: 1px solid black;
+  filter: saturate(0);
 }
 
 .form-courses label button:hover {
-    filter: grayscale(0)  
-
+  border: 2px solid var(--main-color);
+  filter: saturate(1);
 }
 
 
@@ -89,20 +79,15 @@
 
 .fixed {
   width: 80%;
-  top: -15;
   position: fixed;
+  top: 0;
   margin: auto;
 }
 
 .letters {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-/*   
-  border-top: 1px solid black;
-  border-bottom: 1px solid black; */
-
-  margin: 15px 0;
 
   background-color: white;
 
@@ -144,29 +129,25 @@
 }
 
 #list .header-courses { 
-  width: 20%;
+  width: 10%;
   margin: 10px 0;
   margin-left: -15px;
   margin-top: 50px;
   padding: 0 15px;
 
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: space-around; 
   
-  color: white;
-  font-weight: bold;
   background-color: var(--main-color);  
 }
 
 #list .header-courses h3 { 
   flex: 1;
+  color: white;
   font-size: 42px;
+  font-weight: bold;
 }
-
-#list .header-courses p { 
-  font-size: 16px;
-}
-
 
 #list .header-courses span { 
   width: 23px;

@@ -65,17 +65,14 @@ function renderCourses(dataResponse) {
       const newUl = document.createElement("ul");
       const newDiv = document.createElement("div")
       const newH3 = document.createElement("h3");
-      const newP = document.createElement("p");
       const newSpan = document.createElement("span");
 
       newUl.id = name;
       newH3.innerText = name;
-      newP.innerText = 'X Cursos';
 
       newDiv.classList.add("header-courses")
 
       newDiv.appendChild(newH3);
-      newDiv.appendChild(newP);
       newDiv.appendChild(newSpan);
       newUl.appendChild(newDiv);
       mainUl.appendChild(newUl);
