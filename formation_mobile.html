@@ -1,18 +1,21 @@
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" scontent="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/jpg" href="./image/a.jpg" />
+
+    <title>Formações - AluraScript</title>
+
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/header_styles.css">
-    <link rel="stylesheet" href="./styles/courses_styles.css">
+    <link rel="stylesheet" href="./styles/formationMobile_styles.css">
     <link rel="stylesheet" href="./styles/footer_styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/jpg" href="./image/a.jpg" />
-    <title>Cursos - AluraScript</title>
   </head>
-  
-  <body>
 
+  <body>
     <header class="header">
       <nav class="nav-bar">
         <ul>
@@ -69,26 +72,84 @@
       </div>
     </header>
 
-    <main class="container">
-
-      <span id="span-error"></span>
-
+    <main>
       
-      <h1 id="title"></h1>
+      <section>
+
+        <div>
+          <img src="image/icon-mobile.svg" alt="Icone Mobile" style="width: 50px; height: 50px;">
+          <p>Cursos de</p>
+          <h2>Mobile</h2>
+        </div>
       
-      <form class="form-courses" onsubmit="return handleSubmitCourses(event)">
-        <label for="input-courses">
-          <input id="input-courses" placeholder="Qual curso está procurando?">
-          <button type="submit">Pesquisar</button>
-        </label>
-      </form>
-
-      <div id="letters" class="letters"></div>
+        <p>Crie aplicativos móveis para as principais plataformas, smartphones e tablets. Aprenda frameworks multiplataforma como Flutter e React Native e saiba como criar apps nativas para Android e iOS. Desenvolva também jogos mobile com Unity. Saiba como <a>começar com Mobile</a>.</p>
       
+        <hr>
 
-      <ul id="list"></ul> 
+        <ul style="display: flex;">
+          <li><a href="#"><strong>Todos os cursos</strong></a></li>
+          <li><a href="#multiplataform">Multiplataforma</a></li>
+          <li><a href="#flutter">Flutter</a></li>
+          <li><a href="#android">Android</a></li>
+          <li><a href="#ios">iOS</a></li>
+          <li><a href="#games">Jogos</a></li>
+        </ul>
 
-    </main> 
+        <hr>
+      
+      </section>
+
+      <section>
+
+        <div>
+          <h3 id="multiplataform">Multiplataforma</h3>
+          <div></div>
+        </div>
+
+        <div>
+          <h3 id="flutter">Flutter</h3>
+          <div></div>
+        </div>
+
+        <div>
+          <h3 id="android">Android</h3>
+          <div></div>
+        </div>
+
+        <div>
+          <h3 id="ios">iOS</h3>
+          <div></div>
+        </div>
+
+        <div>
+          <h3 id="games">Jogos</h3>
+          <div></div>
+        </div>
+
+      </section>
+
+      <section>
+
+        <h2>Por onde começar com <span>Mobile</span> ?</h2>
+
+        <p>O <strong>Desenvolvimento Mobile</strong> oferece diferentes opções para a criação de aplicativos para iOS e Android. Se você precisa criar uma <strong>aplicação para smartphones</strong> existem alguns caminhos principais:</p>
+
+        <ol style="padding: 30px;">
+          <li>
+            <p><strong>Desenvolvimento multiplataforma:</strong></p>
+          </li>
+          <li>
+            <p><strong>Desenvolvimento híbrido:</strong></p>
+          </li>
+          <li>
+            <p><strong>Desenvolvimento nativo:</strong></p>
+          </li>
+        </ol>
+
+      </section>
+
+
+    </main>
 
     <footer class="footer">
       <div class="footer-container">
@@ -97,10 +158,10 @@
         <ul class="footer-list">
           <h3>Navegação</h3>
           <li>
-            <a href="#">Cursos</a>
+            <a href="/courses.html">Cursos</a>
           </li>
           <li>
-            <a href="/formations.html">Formações</a>
+            <a href="#">Formações</a>
           </li>
           <li>
             <a href="#">Dev em &ltT&gt</a> 
@@ -113,8 +174,8 @@
     </footer>
 
   </body>
-  
+
   <script src="./scripts/input_search.js"></script>
-  <script type="module" src="./scripts/courses_scripts.js"></script>
+  <script type="module" src="./scripts/formationMobile_scripts.js"></script>
 
 </html>
