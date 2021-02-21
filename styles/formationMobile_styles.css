@@ -10,6 +10,62 @@
   background-color: transparent;
 }
 
+.header-image {
+  width: 200px;
+  height: 40px;
+  background-color: var(--mobile-color);
+
+  position: absolute;
+  left: 100px;
+
+  opacity: .3;
+
+  z-index: -1;
+}
+
+.header-image::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+
+  border-radius: 50%;
+
+  width: 200px;
+  height: 200px;
+  top: -100px;
+  left: -60px;
+  background-color: var(--mobile-color);
+
+}
+
+.header-image::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+
+  border-end-end-radius: 50%;
+
+
+  width: 150px;
+  height: 75px;
+  top:  -35px;
+  left: 140px;
+  background-color: var(--mobile-color);
+}
+
+.header-image div {
+  position: absolute;
+  width: 145px;
+  height: 45px;
+  border-top-left-radius: 50%;
+
+  left: 129px;
+  top: 25px;
+
+  z-index: 1;
+  background-color: #eaeff5;
+}
+
 .section-header::after {
   content: '';
   z-index: -1;
