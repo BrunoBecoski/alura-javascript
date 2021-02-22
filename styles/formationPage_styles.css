@@ -11,59 +11,38 @@
 }
 
 .header-image {
-  width: 200px;
-  height: 40px;
-  background-color: var(--mobile-color);
-
-  position: absolute;
-  left: 100px;
+  position: relative;
+  z-index: -1;
 
   opacity: .3;
-
-  z-index: -1;
 }
 
 .header-image::before {
   content: '';
-  z-index: -1;
-  position: absolute;
 
-  border-radius: 50%;
-
-  width: 200px;
+  width: 250px;
   height: 200px;
-  top: -100px;
-  left: -60px;
-  background-color: var(--mobile-color);
 
+  position: absolute;
+  top: -110px;
+  left: -100px;
+  
+  border-radius: 50%;
+  background-color: var(--color-var);
 }
 
 .header-image::after {
   content: '';
-  z-index: -1;
-  position: absolute;
 
+  width: 250px;
+  height: 150px;
+
+  position: absolute;
+  top: -110px;
+  left: 100px;  
+  
   border-end-end-radius: 50%;
-
-
-  width: 150px;
-  height: 75px;
-  top:  -35px;
-  left: 140px;
-  background-color: var(--mobile-color);
-}
-
-.header-image div {
-  position: absolute;
-  width: 145px;
-  height: 45px;
-  border-top-left-radius: 50%;
-
-  left: 129px;
-  top: 25px;
-
-  z-index: 1;
-  background-color: #eaeff5;
+  background-color: var(--color-var);
 }
 
 .section-header::after {
@@ -92,11 +71,11 @@
   .header-icon img {
     width: 75px;
     height: 75px;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 10px;
 
     border-radius: 10px;
-    background-color: var(--mobile-color);
+    background-color: var(--color-var);
   }
 
   .header-icon p {
@@ -330,7 +309,7 @@
   .about-header h2 span {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--mobile-color);
+    color: var(--color-var);
   } 
   
   .about-header p,
@@ -389,7 +368,7 @@
   height: 10px;
   width: 150px;
 
-  background-color: var(--mobile-color);
+  background-color: var(--color-var);
 }
   
   /* = TOP =*/
@@ -406,7 +385,7 @@
     height: 75px;
     
     border-radius: 5px;
-    background-color: var(--mobile-color); 
+    background-color: var(--color-var); 
   }
   
   .footer-top p {
@@ -415,7 +394,7 @@
   }
 
   .footer-top span {
-    color: var(--mobile-color);
+    color: var(--color-var);
     font-weight: 700;
   }
 
